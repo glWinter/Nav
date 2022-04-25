@@ -1,6 +1,7 @@
 package com.winter.navdemo;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -8,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.winter.navdemo.bean.BaseResponse;
 import com.winter.navdemo.bean.RequestUser;
-import com.winter.navdemo.bean.User;
+import com.winter.navdemo.bean.Person;
 import com.winter.navdemo.manager.UserManager;
 import com.winter.navdemo.network.ApiService;
 import com.winter.navdemo.network.RetrofitUtils;
@@ -37,24 +38,18 @@ public class LoginActivity extends AppCompatActivity {
         requestUser.setAccount("gaolei");
         requestUser.setPassword("123456");
         RetrofitUtils.getInstance().get().create(ApiService.class).getUser(requestUser)
-                .enqueue(new Callback<BaseResponse<User>>() {
+                .enqueue(new Callback<BaseResponse<Person>>() {
                     @Override
-                    public void onResponse(Call<BaseResponse<User>> call, Response<BaseResponse<User>> response) {
+                    public void onResponse(Call<BaseResponse<Person>> call, Response<BaseResponse<Person>> response) {
                         if(response.body()!=null&&response.body().code==200){
-                            User user = response.body().t;
-                            UserManager.flag = true;
-                            UserManager.getInstance().mutableLiveData.postValue("a");
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    finish();
-                                }
-                            });
+                            Person user = response.body().t;
+                            UserManager.getInstance().save(user);
+                            runOnUiThread(() -> finish());
                         }
                     }
                     @Override
-                    public void onFailure(Call<BaseResponse<User>> call, Throwable t) {
-
+                    public void onFailure(Call<BaseResponse<Person>> call, Throwable t) {
+                        Log.d("test","t = "+t.getMessage());
                     }
                 });
     }

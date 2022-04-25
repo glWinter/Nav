@@ -29,7 +29,7 @@ public class HomeFragment extends Fragment {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UserManager.flag = false;
+                UserManager.mUser = null;
             }
         });
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);

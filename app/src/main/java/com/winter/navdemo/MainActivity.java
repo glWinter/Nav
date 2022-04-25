@@ -42,14 +42,12 @@ public class MainActivity extends AppCompatActivity {
         navView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if(item.getItemId() == R.id.navigation_dashboard&&!UserManager.flag){
+                if(item.getItemId() == R.id.navigation_dashboard&& UserManager.mUser == null){
                     UserManager.getInstance().test(MainActivity.this)
-                            .observe(MainActivity.this, s -> {
-                                if(TextUtils.equals("a",s)){
-                                    ToastUtils.Show(s);
-                                    navController.navigate(R.id.navigation_dashboard);
-                                    navView.setSelectedItemId(R.id.navigation_dashboard);
-                                }
+                            .observe(MainActivity.this, user -> {
+                                ToastUtils.Show(user.toString());
+                                navController.navigate(R.id.navigation_dashboard);
+                                navView.setSelectedItemId(R.id.navigation_dashboard);
                             });
                 }else{
                     navController.navigate(item.getItemId());
@@ -57,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 if(item.getItemId() == R.id.navigation_home||item.getItemId() == R.id.navigation_notifications){
                     return true;
                 }else{
-                    return UserManager.flag;
+                    return UserManager.mUser != null;
                 }
             }
         });

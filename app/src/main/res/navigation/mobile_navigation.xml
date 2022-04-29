@@ -9,17 +9,17 @@
         android:id="@+id/navigation_home"
         android:name="com.winter.navdemo.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/main_fragment_home_layout" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.winter.navdemo.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/main_fragment_dashboard_layout" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.winter.navdemo.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/main_fragment_notifications_layout" />
 </navigation>

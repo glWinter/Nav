@@ -4,10 +4,24 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1645" />
+        <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/drawable/bottom_btn_selected_color.xml" value="0.1645" />
+        <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/drawable/button_shape.xml" value="0.1645" />
+        <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1645" />
+        <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/drawable/ic_baseline_edit_road_24.xml" value="0.1645" />
         <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1645" />
+        <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/drawable/login_bg_gradient.xml" value="0.1645" />
+        <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/drawable/login_edit_text_border.xml" value="0.1645" />
+        <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/drawable/login_view_layout.xml" value="0.1645" />
+        <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/drawable/text_cursor_cyan.xml" value="0.1645" />
         <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/layout/activity_login.xml" value="0.296195652173913" />
         <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/layout/activity_main.xml" value="0.296195652173913" />
+        <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/layout/fragment_dashboard.xml" value="0.296195652173913" />
         <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/layout/fragment_home.xml" value="0.296195652173913" />
+        <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/layout/main_activity_layout.xml" value="0.296195652173913" />
+        <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/layout/main_fragment_home_layout.xml" value="0.296195652173913" />
+        <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/layout/main_login_activity_layout.xml" value="0.33" />
+        <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/layout/main_splash_activity_layout.xml" value="0.296195652173913" />
+        <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/layout/title_bar_layout.xml" value="0.25" />
         <entry key="..\:/code/OwnerProject/NavDemo/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25277777777777777" />
       </map>
     </option>
